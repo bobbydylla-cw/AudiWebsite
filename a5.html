@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi A5, S5, RS5 - Detailed Overview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .car-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .car-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .car-gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .spec-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .spec-card h3 {
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        .spec-card ul {
+            list-style: none;
+        }
+
+        .spec-card li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .price-tag {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Audi A5, S5, RS5</h1>
+        <p>Elegant Sportback Performance</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Models</a>
+
+        <div class="car-gallery">
+            <img src="https://www.edmunds.com/assets/m/cs/blte5522f5112b70bab/668e74343d793f3f7d76da6c/2026_Audi_S5_sedan_002_717.jpg" alt="Audi S5 Front" onclick="openLightbox(this.src)">
+            <img src="https://s1.cdn.autoevolution.com/images/news/gallery/rendering-new-2026-audi-rs-5-is-almost-ready-to-open-the-bmw-m3-hunting-season_3.jpg" alt="Audi S5 Rear" onclick="openLightbox(this.src)">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1sLWBc.img?w=768&h=432&m=6" alt="Audi S5 Interior" onclick="openLightbox(this.src)">
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="close-button" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="Enlarged view">
+        </div>
+
+        <p class="price-tag">Starting at $49,000</p>
+
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>A5 Specifications</h3>
+                <ul>
+                    <li>Engine: 2.0L TFSI 4-cylinder</li>
+                    <li>Horsepower: 261 hp</li>
+                    <li>Torque: 273 lb-ft</li>
+                    <li>Transmission: 7-speed S tronic</li>
+                    <li>0-60 mph: 5.7 seconds</li>
+                </ul>
+            </div>
+
+            <div class="spec-card">
+                <h3>S5 Specifications</h3>
+                <ul>
+                    <li>Engine: 3.0L TFSI V6</li>
+                    <li>Horsepower: 349 hp</li>
+                    <li>Torque: 369 lb-ft</li>
+                    <li>Transmission: 8-speed Tiptronic</li>
+                    <li>0-60 mph: 4.5 seconds</li>
+                </ul>
+            </div>
+
+            <div class="spec-card">
+                <h3>RS5 Specifications</h3>
+                <ul>
+                    <li>Engine: 2.9L TFSI V6</li>
+                    <li>Horsepower: 444 hp</li>
+                    <li>Torque: 443 lb-ft</li>
+                    <li>Transmission: 8-speed Tiptronic</li>
+                    <li>0-60 mph: 3.7 seconds</li>
+                </ul>
+            </div>
+
+            <div class="spec-card">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Virtual Cockpit Plus</li>
+                    <li>MMI Navigation Plus</li>
+                    <li>Bang & Olufsen 3D Sound System</li>
+                    <li>Quattro All-Wheel Drive</li>
+                    <li>Matrix LED Headlights</li>
+                    <li>Sport Differential</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close lightbox when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

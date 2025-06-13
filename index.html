@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi Models Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .model-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .model-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .model-info {
+            padding: 1.5rem;
+        }
+
+        .model-info h3 {
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .model-info p {
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #000000;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Audi Models Showcase</h1>
+        <p>Discover the perfect Audi Sedan/Wagon for you</p>
+    </header>
+
+    <div class="container">
+        <div class="models-grid">
+            <a href="a3.html" class="model-card">
+                <img src="https://www.mensjournal.com/.image/t_share/MjEwODM5MTYyMzQzNTk4MDU3/2024-audi-rs3.jpg" alt="Audi RS3" class="model-image">
+                <div class="model-info">
+                    <h3>Audi A3, S3, RS3</h3>
+                    <p>The Audi A3 is a premium subcompact sedan (also available as a hatchback in some markets) that offers upscale features and sharp handling in a compact package, while the S3 delivers spirited performance with a turbocharged punch, and the RS3 pushes the limits with a powerful five-cylinder engine and track-ready dynamics.</p>
+                    <p class="price">Starting at $39,500</p>
+                </div>
+            </a>
+
+            <a href="a5.html" class="model-card">
+                <img src="https://www.edmunds.com/assets/m/cs/blte5522f5112b70bab/668e74343d793f3f7d76da6c/2026_Audi_S5_sedan_002_717.jpg" alt="Audi RS5" class="model-image">
+                <div class="model-info">
+                    <h3>Audi A5 S5, RS5</h3>
+                    <p>The Audi A5 lineup offers elegant sportback and wagon body styles with sleek design and premium comfort, while the S5 and RS5 versions elevate performance.</p>
+                    <p class="price">Starting at $49,000</p>
+                </div>
+            </a>
+
+            <a href="a6.html" class="model-card">
+                <img src="https://carwow-uk-wp-1.imgix.net/2027-Audi-RS6-Avant-front-quarter.jpg?auto=format&cs=tinysrgb&fit=crop&h=800&ixlib=rb-1.1.0&q=60&w=1600" alt="Audi RS6 Avant^" class="model-image">
+                <div class="model-info">
+                    <h3>Audi A6, S6, RS6</h3>
+                    <p>The Audi A6 is a midsize executive sedan or Avant wagon that balances luxury, space, and technology, with the S6 offering a sportier, V6-powered experience and the RS6 Avant delivering full-blown performance in a wagon body, combining supercar speed with everyday utility.</p>
+                    <p class="price">Starting at $58,100</p>
+                </div>
+            </a>
+
+            <a href="a7.html" class="model-card">
+                <img src="https://media.ed.edmunds-media.com/audi/rs-7/2025/oem/2025_audi_rs-7_sedan_performance_fq_oem_1_1600.jpg" alt="Audi RS7^" class="model-image">
+                <div class="model-info">
+                    <h3>Audi A7, S7, RS7</h3>
+                    <p>The Audi A7 is a luxury sportback sedan that blends the elegance of a coupe, the practicality of a hatchback, and the performance of a high-end executive car.</p>
+                    <p class="price">Starting at $72,000</p>
+                </div>
+            </a>
+
+            <a href="a8.html" class="model-card">
+                <img src="https://i.ytimg.com/vi/s-hXXoBicuk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDfchvvrtCICjySqyFu3gwOuS9RfQ" alt="Audi S8^" class="model-image">
+                <div class="model-info">
+                    <h3>Audi A8/S8</h3>
+                    <p>The Audi A8 is the brand's flagship full-size luxury sedan, emphasizing supreme comfort, cutting-edge tech, and a serene ride, while the S8 variant adds a twin-turbo V8 and sport-tuned refinement, turning it into a high-performance limousine.</p>
+                    <p class="price">Starting at $94,000</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
